@@ -1,0 +1,90 @@
+.container {
+  padding: 20px 24px;
+}
+
+/* 🔍 Filters Section */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+  justify-content: space-between;
+}
+.categoySelect {
+    display: flex;
+    gap: 20px;
+}
+
+.input,
+.select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.input {
+  width: 280px;
+}
+
+.input:focus,
+.select:focus {
+  border-color: #2563eb;
+}
+
+/* 📦 Product Grid */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .input {
+    width: 91%;
+  }
+  .categoySelect {
+    flex-wrap: wrap;
+  }
+  .select {
+    width: 100%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+}
+
+/* Empty / Loading */
+.message {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 16px;
+  color: #6b7280;
+}

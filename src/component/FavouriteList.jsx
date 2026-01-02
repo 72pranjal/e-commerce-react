@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toggleFavourite } from "../store/productSlice";
 import { Link } from "react-router-dom";
+import ProductCard from "./ProductCard";
 
 const FavouriteList = () => {
   const dispatch = useDispatch();
@@ -33,14 +34,10 @@ const FavouriteList = () => {
             key={product.id}
             style={{ border: "1px solid #ddd", padding: 10 }}
           >
-            <img
-              src={product.image}
-              alt={product.title}
-              width="100"
-              height="100"
-            />
-            <h4>{product.title}</h4>
-            <p>₹ {product.price}</p>
+            {
+              <ProductCard product={product} />
+            }
+
 
             {/* ❌ Remove */}
             <button

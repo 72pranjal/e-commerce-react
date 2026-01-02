@@ -1,0 +1,115 @@
+.container {
+  padding: 20px 24px;
+}
+
+.backLink {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.wrapper {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+/* 🖼 Image */
+.image {
+  width: 300px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* 📄 Content */
+.content {
+  flex: 1;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.description {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* ❤️ Favourite Button */
+.favBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.add {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.remove {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+/* 🔽 Tablet */
+@media (max-width: 1024px) {
+  .wrapper {
+    gap: 24px;
+  }
+
+  .image {
+    width: 260px;
+  }
+}
+
+/* 🔽 Mobile */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .image {
+    width: 220px;
+  }
+}
+
+/* 🔽 Small Mobile */
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+}
+
+/* Loading / Empty */
+.message {
+  text-align: center;
+  font-size: 18px;
+  color: #6b7280;
+}

@@ -2,10 +2,12 @@
 // import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Header from "./component/Header";
-import ProductList from "./component/ProductList";
-import ProductDetail from "./component/ProductDetail";
-import FavouriteList from "./component/FavouriteList";
+import Header from "./component/Header/Header";
+import FavouritView from "./pages/FavouriteView";
+import ProductDetailView from "./pages/ProductDetailView";
+import ProductListingView from "./pages/ProductListingView";
+import HomeView from "./pages/HomeView";
+
 
 function App() {
   return (
@@ -13,9 +15,10 @@ function App() {
       <Header /> {/* 🔥 Common header */}
 
       <Routes>
-        <Route path="/" element={<ProductList />} />
-        <Route path="/products/:id" element={<ProductDetail />} />
-        <Route path="/favourites" element={<FavouriteList />} />
+        <Route path="/" element={<ProductListingView />} />
+        <Route path="/listing" element={<ProductListingView />} />
+        <Route path="/products/:id" element={<ProductDetailView />} />
+        <Route path="/favourites" element={<FavouritView />} />
       </Routes>
     </BrowserRouter>
   );
