@@ -1,3 +1,4 @@
+import React from 'react'; // ✅ important for Jest
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
