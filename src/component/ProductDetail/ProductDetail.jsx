@@ -42,6 +42,15 @@ const ProductDetail = () => {
 
         <div className={styles.content}>
           <h2 className={styles.title}>{detail.title}</h2>
+          <span className={styles.category}>
+            {detail.category}
+          </span>
+          <div className={styles.rating}>
+            <span>⭐ {detail.rating?.rate}</span>
+            <span className={styles.count}>
+              ({detail.rating?.count} reviews)
+            </span>
+          </div>
           <p className={styles.description}>{detail.description}</p>
           <h3 className={styles.price}>$ {detail.price}</h3>
 
